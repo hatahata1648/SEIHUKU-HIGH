@@ -35,7 +35,7 @@ navigator.mediaDevices.getUserMedia(constraints)
   .catch(err => console.error(err));
 
 // 写真の撮影
-captureBtn.addEventListener('', () => {
+captureBtn.addEventListener('click', () => {
   canvas.width = video.videoWidth;
   canvas.height = video.videoHeight;
   const ctx = canvas.getContext('2d');
@@ -163,4 +163,5 @@ rotateLink.addEventListener('click', (event) => {
   currentOverlayIndex = (currentOverlayIndex + 1) % overlays.length;
   overlayImage.src = overlays[currentOverlayIndex];
 });
+
 
